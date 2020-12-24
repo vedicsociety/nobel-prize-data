@@ -22,7 +22,7 @@ package-lock.json
 package-lock.json
 **/.rpt2_cache/**
 .next
-.idea/**
+.idea
 .vercel
 jspm_packages
 dev.db
