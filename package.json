@@ -10,7 +10,11 @@
     "url": "https://github.com/vedicsociety/nobel-prize-data"
   },
   "scripts": {
-
+    "build": "yarn install",
+    "build-inside": "cd ./indexer && yarn install",
+    "build-next": "cd ./next && yarn install",
+    "run-indexer": "cd ./indexer && yarn start",
+    "run-next": "cd ./next && yarn start"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.6",

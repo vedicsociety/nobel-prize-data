@@ -106,7 +106,7 @@ Then setup Searchkit. Below is a configuration based on your settings.
 
 ```javascript
   const searchkitConfig = {
-    host: 'http://localhost:9200/',
+    host: 'https://l1fc6g6ov4:z146wupnkh@dogwood-190374675.eu-west-1.bonsaisearch.net:443',
     index: 'noble_prize',
     hits: {
       fields: ['category','year','entity','name','birthdate','nameLength','birthplace','birthCountry','wiki','motherTongue','ethinic','religion','gender','age','url','qualifications','lastUniversity','residence','organization','field','prizeName','motivation','institution','uniranking','id']

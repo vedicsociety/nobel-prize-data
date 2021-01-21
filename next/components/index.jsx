@@ -61,6 +61,8 @@ const query = gql`
             institution
             year
             url
+            prizeName
+            motivation
           }
         }
       }

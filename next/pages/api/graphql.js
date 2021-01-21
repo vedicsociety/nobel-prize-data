@@ -19,7 +19,7 @@ const searchkitConfig = {
   sortOptions : [
     { id : 'relevance' , label : "Relevance" , field : [ { "_score" : "desc" } ] , defaultOption : true }
   ] ,
-  query : new MultiMatchQuery ( { fields : [ 'category' , 'gender' ] } ) ,
+  query : new MultiMatchQuery ( { fields : [ 'category' , 'gender', 'name^4' ] } ) ,
   facets : [
 
     new RefinementSelectFacet ( {
@@ -28,11 +28,11 @@ const searchkitConfig = {
       label : 'entity'
     } ) ,
 
-    new RefinementSelectFacet ( {
-      field : 'name' ,
-      identifier : 'name' ,
-      label : 'name'
-    } ) ,
+    // new RefinementSelectFacet ( {
+    //   field : 'name' ,
+    //   identifier : 'name' ,
+    //   label : 'name'
+    // } ) ,
 
     new DateRangeFacet ( {
       field : 'birthdate' ,
@@ -40,11 +40,11 @@ const searchkitConfig = {
       label : 'birthdate'
     } ) ,
 
-    new RefinementSelectFacet ( {
-      field : 'birthplace' ,
-      identifier : 'birthplace' ,
-      label : 'birthplace'
-    } ) ,
+    // new RefinementSelectFacet ( {
+    //   field : 'birthplace' ,
+    //   identifier : 'birthplace' ,
+    //   label : 'birthplace'
+    // } ) ,
 
     new RefinementSelectFacet ( {
       field : 'birthCountry' ,
@@ -52,11 +52,11 @@ const searchkitConfig = {
       label : 'birthCountry'
     } ) ,
 
-    new RefinementSelectFacet ( {
-      field : 'wiki' ,
-      identifier : 'wiki' ,
-      label : 'wiki'
-    } ) ,
+    // new RefinementSelectFacet ( {
+    //   field : 'wiki' ,
+    //   identifier : 'wiki' ,
+    //   label : 'wiki'
+    // } ) ,
 
     new RefinementSelectFacet ( {
       field : 'motherTongue' ,
@@ -83,65 +83,65 @@ const searchkitConfig = {
     } ) ,
 
 
-              new RefinementSelectFacet({
-              field: 'url',
-              identifier: 'url',
-              label: 'url'
-            }),
+            //   new RefinementSelectFacet({
+            //   field: 'url',
+            //   identifier: 'url',
+            //   label: 'url'
+            // }),
 
-              new RefinementSelectFacet({
-              field: 'qualifications',
-              identifier: 'qualifications',
-              label: 'qualifications'
-            }),
+            //   new RefinementSelectFacet({
+            //   field: 'qualifications',
+            //   identifier: 'qualifications',
+            //   label: 'qualifications'
+            // }),
+            //
+            //   new RefinementSelectFacet({
+            //   field: 'lastUniversity',
+            //   identifier: 'lastUniversity',
+            //   label: 'lastUniversity'
+            // }),
+            //
+            //   new RefinementSelectFacet({
+            //   field: 'residence',
+            //   identifier: 'residence',
+            //   label: 'residence'
+            // }),
 
-              new RefinementSelectFacet({
-              field: 'lastUniversity',
-              identifier: 'lastUniversity',
-              label: 'lastUniversity'
-            }),
+            //   new RefinementSelectFacet({
+            //   field: 'organization',
+            //   identifier: 'organization',
+            //   label: 'organization'
+            // }),
+            //
+            //   new RefinementSelectFacet({
+            //   field: 'field',
+            //   identifier: 'field',
+            //   label: 'field'
+            // }),
 
-              new RefinementSelectFacet({
-              field: 'residence',
-              identifier: 'residence',
-              label: 'residence'
-            }),
+            //   new RefinementSelectFacet({
+            //   field: 'prizeName',
+            //   identifier: 'prizeName',
+            //   label: 'prizeName'
+            // }),
+            //
+            //   new RefinementSelectFacet({
+            //   field: 'motivation',
+            //   identifier: 'motivation',
+            //   label: 'motivation'
+            // }),
 
-              new RefinementSelectFacet({
-              field: 'organization',
-              identifier: 'organization',
-              label: 'organization'
-            }),
-
-              new RefinementSelectFacet({
-              field: 'field',
-              identifier: 'field',
-              label: 'field'
-            }),
-
-              new RefinementSelectFacet({
-              field: 'prizeName',
-              identifier: 'prizeName',
-              label: 'prizeName'
-            }),
-
-              new RefinementSelectFacet({
-              field: 'motivation',
-              identifier: 'motivation',
-              label: 'motivation'
-            }),
-
-              new RefinementSelectFacet({
-              field: 'institution',
-              identifier: 'institution',
-              label: 'institution'
-            }),
-
-              new RefinementSelectFacet({
-              field: 'uniranking',
-              identifier: 'uniranking',
-              label: 'uniranking'
-            }),
+            //   new RefinementSelectFacet({
+            //   field: 'institution',
+            //   identifier: 'institution',
+            //   label: 'institution'
+            // }),
+            //
+            //   new RefinementSelectFacet({
+            //   field: 'uniranking',
+            //   identifier: 'uniranking',
+            //   label: 'uniranking'
+            // }),
    ]
 }
 

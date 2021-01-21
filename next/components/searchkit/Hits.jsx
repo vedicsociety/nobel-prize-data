@@ -8,8 +8,8 @@ export const HitsGrid = ({ data }) => (
         <EuiCard
           grow={false}
           textAlign="left"
-          image={<img src={hit.fields.poster} style={{ maxWidth: 200 }} alt="Nature" />}
-          title={hit.fields.title}
+          image={<img src={hit.fields.url} style={{ maxWidth: 200 }} alt="Nature" />}
+          title={hit.fields.name}
           description={hit.fields.plot}
         />
       </EuiFlexItem>
@@ -28,10 +28,13 @@ export const HitsList = ({ data }) => (
             </EuiFlexItem>
             <EuiFlexItem grow={4}>
               <EuiTitle size="xs">
-                <h6>{hit.fields.title}</h6>
+                <h6>{hit.fields.name}</h6>
               </EuiTitle>
               <EuiText grow={false}>
-                <p>{hit.fields.plot}</p>
+                <p>{hit.fields.prizeName}</p>
+              </EuiText>
+              <EuiText grow={false}>
+                <p>{hit.fields.motivation}</p>
               </EuiText>
             </EuiFlexItem>
             <EuiFlexItem grow={2}>
