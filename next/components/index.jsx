@@ -63,6 +63,7 @@ const query = gql`
             url
             prizeName
             motivation
+            qualifications
           }
         }
       }
